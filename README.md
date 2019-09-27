@@ -74,3 +74,5 @@
 * Policies in Vault control what a user can access.
   - The `default` policy provides a common set of permissions and is included on all tokens by default. 
   - The `root` policy gives a token super admin permissions, similar to a root user on a linux machine.
+* To format a policy file: `vault policy fmt my-policy.hcl`
+* To write a policy: `vault policy write my-policy my-policy.hcl`
