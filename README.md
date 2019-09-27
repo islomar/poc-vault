@@ -60,6 +60,7 @@
 * To authenticate with a token: `vault login <your_token>`
 * After a token is created, you can revoke it: `vault token revoke <your_token>`
 * Log back with root token: `vault login $VAULT_DEV_ROOT_TOKEN_ID`
+* In practice, operators should not use the `token create` command to generate Vault tokens for users or machines. Instead, those users or machines should authenticate to Vault using any of Vault's configured auth methods such as GitHub, LDAP, AppRole, etc.
 
 ### Authorization
 * TBD
