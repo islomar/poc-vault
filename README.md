@@ -89,3 +89,6 @@
 * `vault operator init`: Initializing the Vault: Initialization is the process configuring the Vault. This only happens once when the server is started against a new backend that has never been used with Vault before. When running in HA mode, this happens once per cluster, not per server.
   - It returns 5 Unseal keys and an initial root token.
   - In a real deployment scenario, you would never save these keys together. Instead, you would likely use [Vault's PGP and Keybase.io support](https://www.vaultproject.io/docs/concepts/pgp-gpg-keybase.html) to encrypt each of these keys with the users' PGP keys. This prevents one single person from having all the unseal keys. 
+* Every initialized Vault server starts in the sealed state. From the configuration, Vault can access the physical storage, but it can't read any of it because it doesn't know how to decrypt it. The process of teaching Vault how to decrypt the data is known as unsealing the Vault.
+* Unsealing has to happen every time Vault starts.
+* Vault uses an algorithm known as [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing) to split the master key into shards. 
