@@ -59,6 +59,7 @@
   - tokens always have a parent, and when that parent token is revoked, children can also be revoked all in one operation.
 * To authenticate with a token: `vault login <your_token>`
 * After a token is created, you can revoke it: `vault token revoke <your_token>`
+* Log back with root token: `vault login $VAULT_DEV_ROOT_TOKEN_ID`
 
 ### Authorization
 * TBD
