@@ -18,5 +18,10 @@
   - `export VAULT_DEV_ROOT_TOKEN_ID="<your_root_token>"`
   - `export VAULT_ADDR='http://127.0.0.1:8200'`
   - Verify it is up and running: `vault status`
-* Write a secret: `vault kv put secret/hello foo=world`
-* Read a secret: `vault kv get secret/hello`
+* CRUD secrets:
+  * Write a secret: `vault kv put secret/hello foo=world`
+  * Read a secret: `vault kv get secret/hello`
+  * To print only the value of a given field: 
+    - `vault kv get -field=excited secret/hello`
+    - `vault kv get -format=json secret/hello | jq -r .data.data.excited`
+  * Delete a secret: `vault kv delete secret/hello`
