@@ -87,3 +87,5 @@
 * `vault server -config=config.hcl`
   - It might show a warning: https://www.vaultproject.io/docs/configuration/index.html#disable_mlock
 * `vault operator init`: Initializing the Vault: Initialization is the process configuring the Vault. This only happens once when the server is started against a new backend that has never been used with Vault before. When running in HA mode, this happens once per cluster, not per server.
+  - It returns 5 Unseal keys and an initial root token.
+  - In a real deployment scenario, you would never save these keys together. Instead, you would likely use [Vault's PGP and Keybase.io support](https://www.vaultproject.io/docs/concepts/pgp-gpg-keybase.html) to encrypt each of these keys with the users' PGP keys. This prevents one single person from having all the unseal keys. 
