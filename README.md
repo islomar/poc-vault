@@ -67,6 +67,8 @@
 * `vault auth list`
 * You can ask for help information about any CLI auth method, even if it is not enabled: `vault auth help github`
 * Authenticate to GitHub: `vault login -method=github`
+* You can revoke any logins from an auth method using: `vault token revoke -mode path auth/github`
+* Disable GitHub auth method: `vault auth disable github`
 
 ### Authorization
 * TBD
