@@ -25,3 +25,4 @@
     - `vault kv get -field=excited secret/hello`
     - `vault kv get -format=json secret/hello | jq -r .data.data.excited`
   * Delete a secret: `vault kv delete secret/hello`
+  * The path prefix (e.g. `secret/`) tells Vault which secrets engine to which it should route traffic. 
