@@ -27,3 +27,4 @@
   * Delete a secret: `vault kv delete secret/hello`
   * The path prefix (e.g. `secret/`) tells Vault which secrets engine to which it should route traffic. By default, Vault enables a secrets engine called `kv` at the path `secret/`. Other possible secrets engines are `aws` or `database`.
 * Enable a secrets engine in another path: `vault secrets enable -path=kv kv`
+* `vault secrets list`
