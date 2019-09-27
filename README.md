@@ -97,4 +97,5 @@
   - When the Vault is sealed again, it clears all of its state (including the encryption key) from memory. The Vault is secure and locked down from access.
 
 ### Using the HTTP APIs with Authentication
-TBD
+* Check initialization: `curl http://127.0.0.1:8200/v1/sys/init`
+* Machines that need access to information stored in Vault will most likely access Vault via its REST API. The application would first authenticate to Vault which would return a Vault API token. The application would use that token for future communication with Vault.
