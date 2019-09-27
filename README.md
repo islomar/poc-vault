@@ -86,3 +86,4 @@
 * Install Consul and start an instance: `consul agent -dev`
 * `vault server -config=config.hcl`
   - It might show a warning: https://www.vaultproject.io/docs/configuration/index.html#disable_mlock
+* `vault operator init`: Initializing the Vault: Initialization is the process configuring the Vault. This only happens once when the server is started against a new backend that has never been used with Vault before. When running in HA mode, this happens once per cluster, not per server.
