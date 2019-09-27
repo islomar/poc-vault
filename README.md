@@ -31,4 +31,15 @@
 * Enable a secrets engine in another path: `vault secrets enable -path=kv kv`
 * List all the existing paths: `vault secrets list`
 * List all the keys for the path `kv`: `vault list kv`
-* Disable a secrets engine: `vault secrets disable kv/`
+* Disable a secrets engine: `vault secrets disable kv/`. When a secrets engine is disabled, all secrets are revoked and the corresponding Vault data and configuration is removed.
+
+### Dynamic secrets
+* https://learn.hashicorp.com/vault/getting-started/dynamic-secrets
+* dynamic secrets are generated when they are accessed. Dynamic secrets do not exist until they are read, so there is no risk of someone stealing them or another client using the same secrets.
+* Enable `aws`: `vault secrets enable -path=aws aws`
+* ```
+vault write aws/config/root \
+    access_key=AKIAI4SGLQPBX6CSENIQ \
+    secret_key=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 \
+    region=us-east-1
+```
