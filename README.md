@@ -106,5 +106,5 @@ curl \
     --data '{"secret_shares": 1, "secret_threshold": 1}' \
     http://127.0.0.1:8200/v1/sys/init | jq
 ```
-  - This response contains our initial root token. It also includes the unseal key. You can use the unseal key to unseal the Vault and use the root token perform other requests in Vault that require authentication.
+    - This response contains our initial root token. It also includes the unseal key. You can use the unseal key to unseal the Vault and use the root token perform other requests in Vault that require authentication.
 * TBD
