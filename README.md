@@ -41,4 +41,6 @@
 *  A role in Vault is a human-friendly identifier to an action.
   - File `create_iam_role.sh`: When I ask for a credential for "my-role", create it and attach the IAM policy `{ "Version": "2012..." }`.
 * Generate an access key pair for that role: `vault read aws/creds/my-role`
-
+  - Each time you read from `aws/creds/:name`, Vault will connect to AWS and generate a new IAM user and key pair.
+  - Take careful note of the `lease_id` field in the output. This value is used for renewal, revocation, and inspection. Copy this lease_id to your clipboard. Note that the lease_id is the full path, not just the UUID at the end.
+  - Revoke the secret: `vault lease revoke <lease_id>` , it will remove the IAM user.
