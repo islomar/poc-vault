@@ -81,3 +81,6 @@
 * Create a token and assign it to a policy: `vault token create -policy=my-policy`
 * Use the `vault path-help` system with your auth method to determine how the mapping is done since it is specific to each auth method. For example, with GitHub, it is done per team using the `map/teams/<team>` path:
 * Auth methods all must map to the central policy system.
+
+### Configuring Vault
+* TBD
