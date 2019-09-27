@@ -100,11 +100,10 @@
 * Check initialization: `curl http://127.0.0.1:8200/v1/sys/init`
 * Machines that need access to information stored in Vault will most likely access Vault via its REST API. The application would first authenticate to Vault which would return a Vault API token. The application would use that token for future communication with Vault.
 * Initialize Vault:
-```
-curl \
+`curl \
     --request POST \
     --data '{"secret_shares": 1, "secret_threshold": 1}' \
-    http://127.0.0.1:8200/v1/sys/init | jq
-```
-    - This response contains our initial root token. It also includes the unseal key. You can use the unseal key to unseal the Vault and use the root token perform other requests in Vault that require authentication.
+    http://127.0.0.1:8200/v1/sys/init | jq`
+
+   - This response contains our initial root token. It also includes the unseal key. You can use the unseal key to unseal the Vault and use the root token perform other requests in Vault that require authentication.
 * TBD
