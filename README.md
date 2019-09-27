@@ -36,5 +36,7 @@
 ### Dynamic secrets
 * https://learn.hashicorp.com/vault/getting-started/dynamic-secrets
 * dynamic secrets are generated when they are accessed. Dynamic secrets do not exist until they are read, so there is no risk of someone stealing them or another client using the same secrets.
-* Enable `aws`: `vault secrets enable -path=aws aws`
-* `vault write aws/config/root access_key=<your_access_key> secret_key=<your_secret_key> region=us-east-1`
+* Enable `aws`: `vault secrets enable -path=aws aws`. The AWS secrets engine generates dynamic, on-demand AWS access credentials.
+* `vault write aws/config/root access_key=<your_access_key> secret_key=<your_secret_key> region=<YOUR_REGION>`
+*  A role in Vault is a human-friendly identifier to an action
+
