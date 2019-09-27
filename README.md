@@ -102,15 +102,16 @@
 * Initialize Vault:
   ```
     curl \
-    --request POST \
-    --data '{"secret_shares": 1, "secret_threshold": 1}' \
-    http://127.0.0.1:8200/v1/sys/init | jq
+      --request POST \
+      --data '{"secret_shares": 1, "secret_threshold": 1}' \
+      http://127.0.0.1:8200/v1/sys/init | jq
     ```
    - This response contains our initial root token. It also includes the unseal key. You can use the unseal key to unseal the Vault and use the root token perform other requests in Vault that require authentication.
 * Unseal the vault:
-```
-curl \
-    --request POST \
-    --data '{"key": "/ye2PeRrd/qruh9Ppu9EyUjk1vLqIflg1qqw6w9OE5E="}' \
-    http://127.0.0.1:8200/v1/sys/unseal | jq
-```
+  ```
+  curl \
+      --request POST \
+      --data '{"key": "<UNSEAL_KEY>"}' \
+      http://127.0.0.1:8200/v1/sys/unseal | jq
+  ```
+  - TBD
