@@ -114,4 +114,4 @@
       --data '{"key": "<UNSEAL_KEY>"}' \
       http://127.0.0.1:8200/v1/sys/unseal | jq
   ```
-  - TBD
+  - Now any of the available auth methods can be enabled and configured.
