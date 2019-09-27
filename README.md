@@ -77,3 +77,5 @@
 * To format a policy file: `vault policy fmt my-policy.hcl`
 * To write a policy: `vault policy write my-policy my-policy.hcl`
 * `vault policy list`
+* To view the contents of a policy: `vault policy read my-policy`
+* Create a token and assign it to a policy: `vault token create -policy=my-policy`
