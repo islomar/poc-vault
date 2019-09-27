@@ -50,4 +50,13 @@
 * `vault path-help aws/creds/my-non-existent-role`
 
 ### Authentication
-* 
+* Vault has pluggable auth methods.
+* Authentication is the process by which user or machine-supplied information is verified and converted into a Vault token with matching policies attached. 
+* Authentication is simply the process by which a user or machine gets a Vault token.
+* When you start a dev server with vault server -dev, it prints your root token. The root token is the initial access token to configure Vault. It has root privileges, so it can perform any operation within Vault.
+* You can create more tokens: `vault token create`
+  - this will create a child token of your current token that inherits all the same policies.
+  - tokens always have a parent, and when that parent token is revoked, children can also be revoked all in one operation.
+
+### Authorization
+* TBD
