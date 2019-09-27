@@ -47,3 +47,7 @@
 
 ### Built-in Help
 * `vault path-help aws`
+* `vault path-help aws/creds/my-non-existent-role`
+
+### Authentication
+* 
