@@ -99,3 +99,11 @@
 ### Using the HTTP APIs with Authentication
 * Check initialization: `curl http://127.0.0.1:8200/v1/sys/init`
 * Machines that need access to information stored in Vault will most likely access Vault via its REST API. The application would first authenticate to Vault which would return a Vault API token. The application would use that token for future communication with Vault.
+* Initialize Vault:
+```
+curl \
+    --request POST \
+    --data '{"secret_shares": 1, "secret_threshold": 1}' \
+    http://127.0.0.1:8200/v1/sys/init | jq
+```
+* TBD
