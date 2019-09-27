@@ -92,3 +92,9 @@
 * Every initialized Vault server starts in the sealed state. From the configuration, Vault can access the physical storage, but it can't read any of it because it doesn't know how to decrypt it. The process of teaching Vault how to decrypt the data is known as unsealing the Vault.
 * Unsealing has to happen every time Vault starts.
 * Vault uses an algorithm known as [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing) to split the master key into shards. 
+* Unseal the Vault: `vault operator unseal`
+* As a root user, you can reseal the Vault with `vault operator seal`
+  - When the Vault is sealed again, it clears all of its state (including the encryption key) from memory. The Vault is secure and locked down from access.
+
+### Using the HTTP APIs with Authentication
+TBD
