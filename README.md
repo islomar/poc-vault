@@ -62,7 +62,11 @@
 * Log back with root token: `vault login $VAULT_DEV_ROOT_TOKEN_ID`
 * In practice, operators should not use the `token create` command to generate Vault tokens for users or machines. Instead, those users or machines should authenticate to Vault using any of Vault's configured auth methods such as GitHub, LDAP, AppRole, etc.
 * Auth methods: Vault supports many auth methods, but they must be enabled before use. 
+  - E.g. enable GitHub auth method: `vault auth enable github`
 * Unlike secrets engines which are enabled at the root router, auth methods are always prefixed with `auth/` in their path. So the GitHub auth method we just enabled is accessible at `auth/github`.
+* `vault auth list`
+* You can ask for help information about any CLI auth method, even if it is not enabled: `vault auth help github`
+* Authenticate to GitHub: `vault login -method=github`
 
 ### Authorization
 * TBD
