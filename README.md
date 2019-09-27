@@ -115,3 +115,8 @@
       http://127.0.0.1:8200/v1/sys/unseal | jq
   ```
   - Now any of the available auth methods can be enabled and configured.
+* The `approle` auth method allows machines or apps to authenticate with Vault-defined roles.
+  - Enable the `approle` auth method.
+  - Create a role `my-role` and get its `id`.
+  - Create a secret_id under `my-role`
+  - fetch a new Vault token providing the role id and the secret_id
