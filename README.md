@@ -83,4 +83,6 @@
 * Auth methods all must map to the central policy system.
 
 ### Configuring Vault
-* TBD
+* Install Consul and start an instance: `consul agent -dev`
+* `vault server -config=config.hcl`
+  - It might show a warning: https://www.vaultproject.io/docs/configuration/index.html#disable_mlock
