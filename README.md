@@ -38,5 +38,7 @@
 * dynamic secrets are generated when they are accessed. Dynamic secrets do not exist until they are read, so there is no risk of someone stealing them or another client using the same secrets.
 * Enable `aws`: `vault secrets enable -path=aws aws`. The AWS secrets engine generates dynamic, on-demand AWS access credentials.
 * `vault write aws/config/root access_key=<your_access_key> secret_key=<your_secret_key> region=<YOUR_REGION>`
-*  A role in Vault is a human-friendly identifier to an action
+*  A role in Vault is a human-friendly identifier to an action.
+  - File `create_iam_role.sh`: When I ask for a credential for "my-role", create it and attach the IAM policy `{ "Version": "2012..." }`.
+* TBD
 
