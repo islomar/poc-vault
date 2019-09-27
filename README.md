@@ -40,5 +40,5 @@
 * `vault write aws/config/root access_key=<your_access_key> secret_key=<your_secret_key> region=<YOUR_REGION>`
 *  A role in Vault is a human-friendly identifier to an action.
   - File `create_iam_role.sh`: When I ask for a credential for "my-role", create it and attach the IAM policy `{ "Version": "2012..." }`.
-* TBD
+* Generate an access key pair for that role: `vault read aws/creds/my-role`
 
