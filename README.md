@@ -126,6 +126,7 @@
 * https://www.vaultproject.io/docs/concepts/seal.html
 * Unsealing is the process of constructing the master key necessary to decrypt the data encryption key.
 * Vault never stores the master key, therefore, the only way to retrieve the master key is to have a quorum of unseal keys re-generate it.
+* [Unseal key vs Recovery key](https://www.vaultproject.io/docs/enterprise/hsm/behavior.html#key-split-between-unseal-keys-and-recovery-keys)
 * https://github.com/hashicorp/vault-guides/tree/master/operations/aws-kms-unseal/terraform-aws
 * The data stored by Vault is stored encrypted. Vault needs the encryption key in order to decrypt the data. **The encryption key is also stored with the data**, but encrypted with another encryption key known as the **master key**. The master key isn't stored anywhere.
 * Instead of distributing this master key as a single key to an operator, Vault uses an algorithm known as Shamir's Secret Sharing to split the key into shards. A certain threshold of shards is required to reconstruct the master key.
