@@ -121,8 +121,14 @@
   - Create a secret_id under `my-role`
   - fetch a new Vault token providing the role id and the secret_id
 
-## Auto-unseal with AWS KMS
-https://learn.hashicorp.com/vault/day-one/ops-autounseal-aws-kms
+
+## Seal/unseal
+* https://www.vaultproject.io/docs/concepts/seal.html
+* Unsealing is the process of constructing the master key necessary to decrypt the data encryption key.
+
+### Auto-unseal with AWS KMS
+* https://learn.hashicorp.com/vault/day-one/ops-autounseal-aws-kms
+
 
 ## Useful info
 * Restart Vault: `sudo systemctl restart vault`
