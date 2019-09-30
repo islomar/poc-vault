@@ -124,5 +124,6 @@
 ## Auto-unseal with AWS KMS
 https://learn.hashicorp.com/vault/day-one/ops-autounseal-aws-kms
 
-## Useful commands
+## Useful info
 * Restart Vault: `sudo systemctl restart vault`
+* Vault configuration: `/etc/vault.d/vault.hcl`
