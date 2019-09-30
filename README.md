@@ -126,7 +126,8 @@
 * https://www.vaultproject.io/docs/concepts/seal.html
 * Unsealing is the process of constructing the master key necessary to decrypt the data encryption key.
 * https://github.com/hashicorp/vault-guides/tree/master/operations/aws-kms-unseal/terraform-aws
-* The data stored by Vault is stored encrypted. Vault needs the encryption key in order to decrypt the data. **The encryption key is also stored with the data**, but encrypted with another encryption key known as the master key. The master key isn't stored anywhere.
+* The data stored by Vault is stored encrypted. Vault needs the encryption key in order to decrypt the data. **The encryption key is also stored with the data**, but encrypted with another encryption key known as the **master key**. The master key isn't stored anywhere.
+* Instead of distributing this master key as a single key to an operator, Vault uses an algorithm known as Shamir's Secret Sharing to split the key into shards. A certain threshold of shards is required to reconstruct the master key.
 
 ### Auto-unseal with AWS KMS
 * https://learn.hashicorp.com/vault/day-one/ops-autounseal-aws-kms
