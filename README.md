@@ -125,6 +125,7 @@
 ## Seal/unseal
 * https://www.vaultproject.io/docs/concepts/seal.html
 * Unsealing is the process of constructing the master key necessary to decrypt the data encryption key.
+* https://github.com/hashicorp/vault-guides/tree/master/operations/aws-kms-unseal/terraform-aws
 
 ### Auto-unseal with AWS KMS
 * https://learn.hashicorp.com/vault/day-one/ops-autounseal-aws-kms
