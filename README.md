@@ -137,7 +137,9 @@
 ### Seal migration
 * https://www.vaultproject.io/docs/concepts/seal.html#seal-migration
 * The seal can be migrated from Shamir keys to Auto Unseal and vice versa.
-
+* To migrate from Shamir keys to Auto Unseal, take your server cluster offline and update the seal configuration with the appropriate seal configuration. 
+* When you bring your server back up, run the unseal process with the -migrate flag. All unseal commands must specify the -migrate flag. Once the required threshold of unseal keys are entered, the unseal keys will be migrated to recovery keys.
+* `vault operator unseal -migrate`
 
 ## Useful info
 * Restart Vault: `sudo systemctl restart vault`
