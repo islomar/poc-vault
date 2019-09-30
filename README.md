@@ -136,6 +136,8 @@
 
 ### Seal migration
 * https://www.vaultproject.io/docs/concepts/seal.html#seal-migration
+* The seal can be migrated from Shamir keys to Auto Unseal and vice versa.
+
 
 ## Useful info
 * Restart Vault: `sudo systemctl restart vault`
