@@ -1,12 +1,13 @@
 # Vault
 
 * https://hub.docker.com/_/vault 
-* https://www.katacoda.com/search?q=vault&hPP=12&idx=scenarios&p=0&is_v=1
-  - https://www.hashicorp.com/blog/enabling-cloud-based-auto-unseal-in-vault-open-source 
+* https://www.hashicorp.com/blog/enabling-cloud-based-auto-unseal-in-vault-open-source 
+
 
 ## Tutorials
 * https://learn.hashicorp.com/vault/getting-started/first-secret 
-* https://www.katacoda.com/courses/docker-production/vault-secrets 
+* https://www.katacoda.com/search?q=vault&hPP=12&idx=scenarios&p=0&is_v=1
+  - https://www.katacoda.com/courses/docker-production/vault-secrets 
 
 
 ## Getting started (official Vault tutorial)
