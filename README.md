@@ -152,7 +152,9 @@
 
 
 ## Operations and Development Tracks
-TBD
+https://learn.hashicorp.com/vault#operations-and-development
+
+
 
 
 ## Useful info
