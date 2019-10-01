@@ -147,6 +147,14 @@
 * To migrate from Auto Unseal to Shamir keys, take your server cluster offline and update the seal configuration and add `disabled = "true"` to the seal block. 
 
 
+### Web UI
+* http://127.0.0.1:8200/ui 
+
+
+## Operations and Development Tracks
+TBD
+
+
 ## Useful info
 * Restart Vault: `sudo systemctl restart vault`
 * Vault configuration: `/etc/vault.d/vault.hcl`
