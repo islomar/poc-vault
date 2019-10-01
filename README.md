@@ -140,6 +140,7 @@
 * https://learn.hashicorp.com/vault/day-one/ops-autounseal-aws-kms
 * https://www.vaultproject.io/docs/concepts/seal.html#auto-unseal
 * Auto Unseal was developed to aid in reducing the operational complexity of keeping the master key secure. This feature delegates the responsibility of securing the master key from users to a trusted device or service. Instead of only constructing the key in memory, the master key is encrypted with one of these services or devices and then stored in the storage backend allowing Vault to decrypt the master key at startup and unseal automatically.
+* Configure `seal "awskms"` in the configuration file `/etc/vault.d/vault.hcl`.
 
 ### Seal migration
 * https://www.vaultproject.io/docs/concepts/seal.html#seal-migration
