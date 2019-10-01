@@ -108,7 +108,7 @@
       --data '{"secret_shares": 1, "secret_threshold": 1}' \
       http://127.0.0.1:8200/v1/sys/init | jq
     ```
-   - This response contains our initial root token. It also includes the unseal key. You can use the unseal key to unseal the Vault and use the root token perform other requests in Vault that require authentication.
+   - This response contains our initial root token. It also includes the unseal key (aka *recovery key*). You can use the unseal key to unseal the Vault and use the root token perform other requests in Vault that require authentication.
 * Unseal the vault:
   ```
   curl \
@@ -131,6 +131,7 @@
 * [Unseal key vs Recovery key](https://www.vaultproject.io/docs/enterprise/hsm/behavior.html#key-split-between-unseal-keys-and-recovery-keys)\
   - Unseal key = Master key
   - Recovery key = created when using HSM.
+  - But in some places, unseal key = recovery keys: https://www.hashicorp.com/blog/enabling-cloud-based-auto-unseal-in-vault-open-source
 * https://github.com/hashicorp/vault-guides/tree/master/operations/aws-kms-unseal/terraform-aws
 * The data stored by Vault is stored encrypted. Vault needs the encryption key in order to decrypt the data. **The encryption key is also stored with the data**, but encrypted with another encryption key known as the **master key**. The master key isn't stored anywhere.
 * Instead of distributing this master key as a single key to an operator, Vault uses an algorithm known as Shamir's Secret Sharing to split the key into shards. A certain threshold of shards is required to reconstruct the master key.
